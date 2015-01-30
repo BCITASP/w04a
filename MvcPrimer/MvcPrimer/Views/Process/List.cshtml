@@ -1,0 +1,18 @@
+﻿@model List<System.Diagnostics.Process>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    // var processes = (List<System.Diagnostics.Process>) ViewBag.SystemProcesses;
+}
+
+<h2>List</h2>
+<ul>
+   @foreach (var p in this.Model) { 
+       <li>@Html.ActionLink(p.ProcessName, "Details", new {id = p.Id})</li>
+   }
+</ul>
+
+@Html.Partial("_HelloPartial")
+
+

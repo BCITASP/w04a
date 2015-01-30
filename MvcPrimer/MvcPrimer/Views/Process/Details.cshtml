@@ -1,0 +1,15 @@
+﻿@model System.Diagnostics.Process
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<ul>
+    <li>@this.Model.Id</li>
+    <li>@this.Model.ProcessName</li>
+    <li>@this.Model.StartTime.ToString()</li>
+    <li>@this.Model.VirtualMemorySize</li>
+</ul>
+
+@Html.Partial("_HelloPartial")

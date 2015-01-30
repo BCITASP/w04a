@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "ShowContent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string content = (string)ViewBag.Content;
+}
+
+<h2>Contents of the text file:</h2>
+<textarea cols="30" rows="5">
+    @content
+</textarea>
+

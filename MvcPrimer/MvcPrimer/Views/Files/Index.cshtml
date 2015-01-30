@@ -1,0 +1,13 @@
+﻿@model string[]
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>File List</h2>
+<ul>
+    @foreach (var filename in this.Model) { 
+        <li>@Html.ActionLink(Path.GetFileName(filename), "ShowContent", new {path = filename})</li>
+    }
+</ul>
+
